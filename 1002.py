@@ -1,4 +1,4 @@
-# 백준 1002번 
+# 1002번 
 '''
 조규현과 백승환은 터렛에 근무하는 직원이다. 하지만 워낙 존재감이 없어서 인구수는 차지하지 않는다. 다음은 조규현과 백승환의 사진이다.
 
@@ -10,16 +10,23 @@ r1 : 조규현이 계산한 류재명과의 거리
 r2 : 과 백승환이 계산한 류재명과의 거리 
 가 주어졌을 때, 류재명이 있을 수 있는 좌표의 수를 출력하는 프로그램을 작성하시오.
 '''
+import math 
+
 T = int(input("테스트 케이스의 수 : "))
 
 # x1, y1, r1, x2, y2, t2
 for _ in range(T):
-    cnt = 0
-    x1, y1, r1, x2, y2, t2 = map(int, input('x1, y1, r1, x2, y2, t2를 입력하시오 : ').split())
-    if x1 == x2 and y1 == y2:
+    x1, y1, r1, x2, y2, r2 = map(int, input('x1, y1, r1, x2, y2, t2를 입력하시오 : ').split())
+    distance = math.sqrt((x1-x2)**2+(y1-y2)**2)
+    # 두 점의 거리
+    if x1 == x2 and y1 == y2 and r1==r2:
         # 류재명이 있는 위치의 개수가 무한대라면 -1
         print(-1)
-        continue
-    
     # 각 테스트 케이스마다 류재명의 위치의 수를 출력
-    print(cnt)
+    elif distance == (r1+r2) or distance == abs(r1-r2):
+        print(1)
+    elif distance < (r1+r2):
+        print(2)
+    else:
+        print(0)*
+
