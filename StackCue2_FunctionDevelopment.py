@@ -1,4 +1,5 @@
-# 미완
+# 미완 
+# https://school.programmers.co.kr/learn/courses/30/lessons/42586
 '''
 기능마다 개발 속도가 달리 뒤의 기능이 먼저 개발되는 경우 있음 -> 배포 불가능
 progresses : 먼저 배포되어야 하는 순서대로 작업의 진도가 적힌 정수 배열

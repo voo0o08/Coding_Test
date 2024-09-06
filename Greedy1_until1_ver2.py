@@ -15,7 +15,7 @@ cnt = 0
 while True:
     # N이 K로 나누어 떨어지는 수가 될 때까지 빼기
     target = (N//K)*K # 가장 가까운 K로 나누어 떨어지는 수
-    cnt += (N-target)
+    cnt += (N-target) # target에 도달할 때까지 1을 빼야하니까 한번에 
 
     # 정지조건 : N이 K보다 작을 때(더 이상 나눌 수 없을 때)
     if N<K:

@@ -36,10 +36,6 @@ def solution(s):
                 result = "0" + result
             else:
                 result = "1" + result
-            
-   
-       
-        
 
         cnt += 1 # 이진화 횟수
         
