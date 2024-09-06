@@ -13,10 +13,10 @@ def quick_sort(array, start, end):
     while (left_idx <= right_idx):
         # 피벗보다 큰 데이터를 찾을 때까지 반복
         while(left_idx <= end and array[left_idx] <= array[pivot_idx]):
-            left_idx+=1
+            left_idx+=1 # left는 항상 오른쪽으로 진행 
         # 피벗보다 작은 데이터를 찾을 때까지 반복
         while(right_idx > start and array[right_idx] >= array[pivot_idx]):
-            right_idx -= 1
+            right_idx -= 1 # right는 항상 왼쪽으로 진행
         
         # 엇갈리는 부분 
         if left_idx > right_idx:
